@@ -7,5 +7,12 @@ angular
 
 		self.test = "Testing controller"
 
+
+
+
+
+
+
 		
-	}
+	} //end of MainController function
+

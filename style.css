@@ -7,26 +7,31 @@
 	padding-top: 10px;
 }*/
 
+
 #container {
-	width: 1280px;
+	max-width: 1280px;
 	margin-left: 0px;
 	background-color: ;
 	height: 600px;
 	border-radius: 20px;
-	background: #88fcfc;
+	/*background: #88fcfc;*/
+	background-color: #8AFFFF;
 }
 
 /****** Player One ******/
 #player-one-side {
   /*border: 1px solid green;*/
-  height: 620px;
+  height: 570px;
   display: inline-block;
-  width: 230px;
+  width: 210px;
   margin-left: 0px;
   margin-right: 20px;
   float: left;
   background-color: #7ae2e2;
   border: 3px solid #447e7e;
+  box-shadow: 10px 10px 10px #888888;
+
+
 }
 
 #player-one-score {
@@ -49,6 +54,9 @@
 	text-align: center;
 	width: 200px;
 	height: 10px;
+	font-size: 35px;
+	font-family: 'Pacifico', cursive;
+	vertical-align: text-top;
 
 }
 
@@ -59,6 +67,8 @@
 	text-align: center;
 	font-size: 120px;
 	margin-left: 20px;
+	font-family: 'Pacifico', cursive;
+
 
 }
 /****** End Player One ******/
@@ -66,13 +76,15 @@
 /****** Player Two ******/
 #player-two-side {
   /*border: 1px solid red;*/
-  height: 620px;
+  height: 570px;
   display: inline-block;
-  width: 220px;
+  width: 210px;
   margin-left: 10px;
   float: right;
   background-color: #7ae2e2;
   border: 3px solid #447e7e;
+  box-shadow: 0px 10px 10px 10px #888888;
+
 }
 
 #player-two-score {
@@ -96,6 +108,9 @@
 	text-align: center;
 	width: 200px;
 	height: 10px;
+	font-size: 35px;
+	font-family: 'Pacifico', cursive;
+
 }
 
 #player-two-move {
@@ -105,6 +120,7 @@
 	text-align: center;
 	font-size: 120px;
 	margin-left: 20px;
+	font-family: 'Pacifico', cursive;
 
 }
 
@@ -131,7 +147,10 @@
 	background-color: yellow;
 	margin-left: 25px;
 	box-shadow: 10px 10px 5px #888888;
+
+
 }
+
 
 #box2 {
 	width: 190px;
@@ -164,6 +183,7 @@
 	background-color: yellow;
 	margin-left: 25px;
 	box-shadow: 10px 10px 5px #888888;
+
 }
 
 #box5 {
@@ -174,6 +194,7 @@
 	display: inline-block;
 	background-color: yellow;
 	box-shadow: 10px 10px 5px #888888;
+
 }
 
 #box6 {
@@ -184,6 +205,7 @@
 	display: inline-block;
 	background-color: yellow;
 	box-shadow: 10px 10px 5px #888888;
+
 }
 
 #box7 {
@@ -195,6 +217,7 @@
 	background-color: yellow;
 	margin-left: 25px;
 	box-shadow: 10px 10px 5px #888888;
+
 }
 
 #box8 {
@@ -205,6 +228,7 @@
 	display: inline-block;
 	background-color: yellow;
 	box-shadow: 10px 10px 5px #888888;
+
 }
 
 #box9 {
@@ -215,6 +239,7 @@
 	display: inline-block;
 	background-color: yellow;
 	box-shadow: 10px 10px 5px #888888;
+
 }
 
 /****End Gameboard*****/

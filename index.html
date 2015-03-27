@@ -35,22 +35,13 @@
 	</div>
 <!-- **************** END PLAYER ONE NAV BAR **************** -->
 
+
 <!-- ******************** GAMEBOARD ************************* -->
 	<div id="gameboard">
-		<div id="box1"></div>
-		<div id="box2"></div>
-		<div id="box3"></div>
-		<div id="box4"></div>
-		<div id="box5"></div>
-		<div id="box6"></div>
-		<div id="box7"></div>
-		<div id="box8"></div>
-		<div id="box9"></div> 
-
-
-		
+		<div id="boxes" ng-repeat="box in main.gameboard" ng-class="{box: box.name}">{{box.name}}</div>
 	</div>
 <!-- ******************** END OF GAMEBOARD ******************** -->
+
 
 <!-- ******************** PLAYER TWO NAV BAR ******************** -->
 	<div id="player-two-side"> 
@@ -67,7 +58,6 @@
 	</div>
 <!-- ******************** END OF PLAYER TWO NAV BAR ***************** -->
 
-</div> <!-- END OF CONTAINER -->
 
-</body>
+</body><!-- END OF CONTAINER -->
 </html>

@@ -127,17 +127,17 @@
 /****** Player Two ******/
 
 /****** Gameboard ******/
+
 #gameboard {
-  /*border: 1px solid black;*/
-  height: 660px;
+  height: 60px;
   display: inline-block;
-  width: 660px;
+  width: 700px;
   margin-top: 0px;
   border-radius: 40px;
   display: inline-block;
-  margin-left: 50px;
+  margin-left: 90px;
 }
-
+/*
 #box1 {
 	width: 190px;
 	height: 190px;
@@ -239,8 +239,21 @@
 	display: inline-block;
 	background-color: yellow;
 	box-shadow: 10px 10px 5px #888888;
+}*/
 
+.box {
+	width: 190px;
+	height: 190px;
+	border: 3px solid black;
+	border-radius: 40px;
+	display: inline-block;
+	background-color: yellow;
+	box-shadow: 10px 10px 5px #888888;
+	margin-left: 
 }
+
+
+
 
 /****End Gameboard*****/
 

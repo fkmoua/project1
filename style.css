@@ -46,18 +46,18 @@
 }
 
 #player-one-name {
-	border: 2px dotted green;
-	margin-top: 5px;
-	margin-left: 0px;
-	border-radius: 20px;
-	padding-top: 20px;
-	text-align: center;
-	width: 200px;
-	height: 10px;
-	font-size: 35px;
-	font-family: 'Pacifico', cursive;
-	vertical-align: text-top;
-
+  border: 2px dotted green;
+  margin-top: 5px;
+  margin-left: 0px;
+  border-radius: 20px;
+  /* padding-top: 20px; */
+  padding-bottom: 8px;
+  text-align: center;
+  width: 200px;
+  height: 60px;
+  font-size: 37px;
+  font-family: 'Pacifico', cursive;
+  vertical-align: text-top;
 }
 
 #player-one-move {
@@ -100,17 +100,18 @@
 }
 
 #player-two-name {
-	border: 2px dotted red;
-	margin-top: 5px;
-	margin-left: 0px;
-	border-radius: 20px;
-	padding-top: 20px;
-	text-align: center;
-	width: 200px;
-	height: 10px;
-	font-size: 35px;
-	font-family: 'Pacifico', cursive;
-
+  border: 2px dotted red;
+  margin-top: 5px;
+  margin-left: 0px;
+  border-radius: 20px;
+  /* padding-top: 20px; */
+  padding-bottom: 8px;
+  text-align: center;
+  width: 200px;
+  height: 60px;
+  font-size: 37px;
+  font-family: 'Pacifico', cursive;
+  vertical-align: text-top;
 }
 
 #player-two-move {
@@ -252,7 +253,12 @@
 	margin-left: 
 }
 
-
+#picked {
+	font-size: 100px;
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+	padding-bottom: 60px;
+}
 
 
 /****End Gameboard*****/

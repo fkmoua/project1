@@ -5,20 +5,45 @@ angular
 	function MainController() {
 		var self = this;
 
-		self.test = "Testing controller"
-
 		self.gameboard = [
-			{name: "one", picked: true},
-			{name: "two", picked: true},
-			{name: "three", picked: true},
-			{name: "four", picked: true},
-			{name: "five", picked: true},
-			{name: "six", picked: true},
-			{name: "seven", picked: true},
-			{name: "eight", picked: true},
-			{name: "nine", picked: true}
-		
-		]
+			{name: "", picked: true, alias: "a"},
+			{name: "", picked: true, alias: "b"},
+			{name: "", picked: true, alias: "c"},
+			{name: "", picked: true, alias: "d"},
+			{name: "", picked: true, alias: "e"},
+			{name: "", picked: true, alias: "f"},
+			{name: "", picked: true, alias: "g"},
+			{name: "", picked: true, alias: "h"},
+			{name: "", picked: true, alias: "i"}
+		];
+
+		self.picked = true;
+
+
+		function testClick() {
+			console.log("hello world");
+		};
+
+		/*self.wins = [
+			win1 = abc && cba,
+			win2 = def && fed, 
+			win3 = ghi && ihg,
+			win4 = adg && gda, 
+			win5 = beh && heb,
+			win6 = cfi && ifc,
+			win7 = gec && ceg,
+			win8 = aei && iea,
+		]*/
+
+		/*self.testWin() {
+			if player_one_pick === win1 {
+				console.log("win!")
+			};
+
+			else {
+				console.log("not win!")
+			}
+		}*/
 
 
 		

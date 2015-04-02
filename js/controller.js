@@ -1,51 +1,42 @@
-angular
+ angular
 	.module('TicTacToe')
 	.controller('MainController', MainController);
 
 	function MainController() {
-		var self = this;
+		var self = this; 
+		var player1 = "X";
+		var player2 = "0";
 
+		self.boxClicked = boxClicked;
+
+		// setting the gameboard //
 		self.gameboard = [
-			{name: "", picked: true, alias: "a"},
-			{name: "", picked: true, alias: "b"},
-			{name: "", picked: true, alias: "c"},
-			{name: "", picked: true, alias: "d"},
-			{name: "", picked: true, alias: "e"},
-			{name: "", picked: true, alias: "f"},
-			{name: "", picked: true, alias: "g"},
-			{name: "", picked: true, alias: "h"},
-			{name: "", picked: true, alias: "i"}
+			{picked: false, alias: "a"},
+			{picked: false, alias: "b"},
+			{picked: false, alias: "c"},
+			{picked: false, alias: "d"},
+			{picked: false, alias: "e"},
+			{picked: false, alias: "f"},
+			{picked: false, alias: "g"},
+			{picked: false, alias: "h"},
+			{picked: false, alias: "i"}
 		];
 
-		self.picked = true;
+		// end of gameboard //
+ 
+		function boxClicked($index) {
+			//called self.gameboard and turn picked true?
+			self.gameboard[$index].picked = true;
+			console.log("Hello")
+			// console.log(self.gameboard[$index].picked)
 
-
-		function testClick() {
-			console.log("hello world");
+			// gameboard[$index]
 		};
 
-		/*self.wins = [
-			win1 = abc && cba,
-			win2 = def && fed, 
-			win3 = ghi && ihg,
-			win4 = adg && gda, 
-			win5 = beh && heb,
-			win6 = cfi && ifc,
-			win7 = gec && ceg,
-			win8 = aei && iea,
-		]*/
-
-		/*self.testWin() {
-			if player_one_pick === win1 {
-				console.log("win!")
-			};
-
-			else {
-				console.log("not win!")
-			}
-		}*/
+		// self.test = true;
 
 
-		
+		//self.gameboard[0].picked = false;
+	
 	} //end of MainController function
 

@@ -15,10 +15,7 @@
 
 <!-- END OF HEAD WITH SCRIPTS AND LINKS AND STYLESHEETS AND STUFF-->
 
-<body id="container" 
-      ng-app="TicTacToe" 
-      ng-controller="MainController as main">
-
+<body id="container" ng-app="TicTacToe" ng-controller="MainController as main">
 
 <!-- **************** PLAYER ONE NAV BAR **************************** -->
 	<div id="player-one-side">
@@ -43,28 +40,22 @@
 
 
 
+
+
+
+
+
 <!-- ******************** GAMEBOARD ************************* -->
 	<div id="gameboard">
-		<button id="boxes"
-		     ng-repeat="box in main.gameboard" 
-		     ng-class="{box: main.gameboard[$index]}"
-		     ng-click="main.picked"
-		     > 
-		     <p id="picked" ng-model="main.picked" ng-show="main.picked"></p>
-		</button>
+
+		<div id="boxes" ng-repeat="box in main.gameboard track by $index" ng-class="{box: true, clicked: main.gameboard[$index].picked}" ng-click="main.boxClicked($index)"> <!-- ng-repeat track by ?--> {{main.gameboard.picked}}
+		 <!-- <span id="chosen" ng-show="main.test">X</span> -->
+		
+		</div>
+		
+
 	</div>
 <!-- ******************** END OF GAMEBOARD ******************** -->
-
-
-
-
-
-
-
-
-
-
-
 
 
 

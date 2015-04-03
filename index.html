@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<!-- HEAD WITH SCRIPTS AND LINKS AND STYLESHEETS AND STUFF-->
 <head>
 	<title>Tic Tac Toe</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -13,16 +12,13 @@
   	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
-<!-- END OF HEAD WITH SCRIPTS AND LINKS AND STYLESHEETS AND STUFF-->
-
 <body id="container" ng-app="TicTacToe" ng-controller="MainController as main">
-
 
 <!-- **************** PLAYER ONE NAV BAR **************************** -->
 	<div id="player-one-side">
 	
 		<div id="player-one-score"></div>
-		<div id="player-one-name"> Fancy</div>
+		<div id="player-one-name">Player One</div>
 		<br>
 		<br>
 		<br>
@@ -35,28 +31,25 @@
 	</div>
 <!-- **************** END PLAYER ONE NAV BAR **************** -->
 
+
 <!-- ******************** GAMEBOARD ************************* -->
 	<div id="gameboard">
-		<div id="box1"></div>
-		<div id="box2"></div>
-		<div id="box3"></div>
-		<div id="box4"></div>
-		<div id="box5"></div>
-		<div id="box6"></div>
-		<div id="box7"></div>
-		<div id="box8"></div>
-		<div id="box9"></div> 
 
+	<div id="boxes" 
+	       ng-repeat="box in main.gameboard track by $index" 
+	       ng-class="{box: true, clicked_player_one: main.gameboard[$index].clicked_player_one, clicked_player_two: main.gameboard[$index].clicked_player_two}"
+	       ng-click="main.boxClicked($index)">
+	</div>
 
-		
 	</div>
 <!-- ******************** END OF GAMEBOARD ******************** -->
+
 
 <!-- ******************** PLAYER TWO NAV BAR ******************** -->
 	<div id="player-two-side"> 
 
 		<div id="player-two-score"></div>
-		<div id="player-two-name"> Patrick </div>
+		<div id="player-two-name"> Player Two </div>
 		<br>
 		<br>
 		<br>
@@ -65,9 +58,8 @@
 		<div id="player-two-move">O</div>
 		
 	</div>
-<!-- ******************** END OF PLAYER TWO NAV BAR ***************** -->
+<!-- ******************** END OF PLAYER TWO NAV BAR ************* -->
 
-</div> <!-- END OF CONTAINER -->
 
-</body>
+</body><!-- END OF CONTAINER -->
 </html>

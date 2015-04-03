@@ -1,2 +1,2 @@
-angular
+ angular
 	.module("TicTacToe", []);

@@ -30,9 +30,8 @@
   background-color: #7ae2e2;
   border: 3px solid #447e7e;
   box-shadow: 10px 10px 10px #888888;
-
-
 }
+
 
 #player-one-score {
 	border: 3px solid #0F3D0F;
@@ -46,18 +45,18 @@
 }
 
 #player-one-name {
-	border: 2px dotted green;
-	margin-top: 5px;
-	margin-left: 0px;
-	border-radius: 20px;
-	padding-top: 20px;
-	text-align: center;
-	width: 200px;
-	height: 10px;
-	font-size: 35px;
-	font-family: 'Pacifico', cursive;
-	vertical-align: text-top;
-
+  border: 2px dotted green;
+  margin-top: 5px;
+  margin-left: 0px;
+  border-radius: 20px;
+  /* padding-top: 20px; */
+  padding-bottom: 8px;
+  text-align: center;
+  width: 200px;
+  height: 60px;
+  font-size: 37px;
+  font-family: 'Pacifico', cursive;
+  vertical-align: text-top;
 }
 
 #player-one-move {
@@ -68,7 +67,6 @@
 	font-size: 120px;
 	margin-left: 20px;
 	font-family: 'Pacifico', cursive;
-
 
 }
 /****** End Player One ******/
@@ -100,17 +98,18 @@
 }
 
 #player-two-name {
-	border: 2px dotted red;
-	margin-top: 5px;
-	margin-left: 0px;
-	border-radius: 20px;
-	padding-top: 20px;
-	text-align: center;
-	width: 200px;
-	height: 10px;
-	font-size: 35px;
-	font-family: 'Pacifico', cursive;
-
+  border: 2px dotted red;
+  margin-top: 5px;
+  margin-left: 0px;
+  border-radius: 20px;
+  /* padding-top: 20px; */
+  padding-bottom: 8px;
+  text-align: center;
+  width: 200px;
+  height: 60px;
+  font-size: 37px;
+  font-family: 'Pacifico', cursive;
+  vertical-align: text-top;
 }
 
 #player-two-move {
@@ -127,32 +126,20 @@
 /****** Player Two ******/
 
 /****** Gameboard ******/
+
 #gameboard {
-  /*border: 1px solid black;*/
-  height: 660px;
+  height: 60px;
   display: inline-block;
-  width: 660px;
+  width: 700px;
   margin-top: 0px;
   border-radius: 40px;
   display: inline-block;
-  margin-left: 50px;
-}
-
-#box1 {
-	width: 190px;
-	height: 190px;
-	border: 3px solid black;
-	border-radius: 40px;
-	display: inline-block;
-	background-color: yellow;
-	margin-left: 25px;
-	box-shadow: 10px 10px 5px #888888;
-
-
+  margin-left: 90px;
 }
 
 
-#box2 {
+
+.box {
 	width: 190px;
 	height: 190px;
 	border: 3px solid black;
@@ -160,87 +147,30 @@
 	display: inline-block;
 	background-color: yellow;
 	box-shadow: 10px 10px 5px #888888;
-
+           transform: skew(0deg);*/
+           transition: 2s all;
 }
 
-#box3 {
-	width: 190px;
-	height: 190px;
-	border: 3px solid black;
-	border-radius: 40px;
-	display: inline-block;
-	background-color: yellow;
-	box-shadow: 10px 10px 5px #888888;
-
+.clicked_player_one{
+    background-color: red;
+}
+.clicked_player_two{
+    background-color: green;
 }
 
-#box4 {
-	width: 190px;
-	height: 190px;
-	border: 3px solid black;
-	border-radius: 40px;
-	display: inline-block;
-	background-color: yellow;
-	margin-left: 25px;
-	box-shadow: 10px 10px 5px #888888;
-
+/*#chosen{
+	font-size: 100px;
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+	padding-bottom: 60px;
 }
 
-#box5 {
-	width: 190px;
-	height: 190px;
-	border: 3px solid black;
-	border-radius: 40px;
-	display: inline-block;
-	background-color: yellow;
-	box-shadow: 10px 10px 5px #888888;
+#cursor {
+    font-family: 'Pacifico', cursive;
+    font-size: 100px;
+    text-align: center;
+}*/
 
-}
-
-#box6 {
-	width: 190px;
-	height: 190px;
-	border: 3px solid black;
-	border-radius: 40px;
-	display: inline-block;
-	background-color: yellow;
-	box-shadow: 10px 10px 5px #888888;
-
-}
-
-#box7 {
-	width: 190px;
-	height: 190px;
-	border: 3px solid black;
-	border-radius: 40px;
-	display: inline-block;
-	background-color: yellow;
-	margin-left: 25px;
-	box-shadow: 10px 10px 5px #888888;
-
-}
-
-#box8 {
-	width: 190px;
-	height: 190px;
-	border: 3px solid black;
-	border-radius: 40px;
-	display: inline-block;
-	background-color: yellow;
-	box-shadow: 10px 10px 5px #888888;
-
-}
-
-#box9 {
-	width: 190px;
-	height: 190px;
-	border: 3px solid black;
-	border-radius: 40px;
-	display: inline-block;
-	background-color: yellow;
-	box-shadow: 10px 10px 5px #888888;
-
-}
 
 /****End Gameboard*****/
 

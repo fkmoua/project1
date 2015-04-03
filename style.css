@@ -151,41 +151,25 @@
            transition: 2s all;
 }
 
-.clicked{
+.clicked_player_one{
+    background-color: red;
+}
+.clicked_player_two{
     background-color: green;
 }
 
-.clicked-player-one{
-    background-color: red;
-}
-
-
-
-.test {
-    border: 10px dotted red;
-}
-
-.box:hover{
-
-   
-
-
-}
-
-#chosen{
+/*#chosen{
 	font-size: 100px;
 	font-family: 'Pacifico', cursive;
 	text-align: center;
 	padding-bottom: 60px;
 }
 
-
-
 #cursor {
     font-family: 'Pacifico', cursive;
     font-size: 100px;
     text-align: center;
-}
+}*/
 
 
 /****End Gameboard*****/

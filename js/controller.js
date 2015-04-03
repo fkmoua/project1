@@ -1,13 +1,16 @@
  angular
 	.module('TicTacToe')
 	.controller('MainController', MainController);
+	counter = 0;
 
 	function MainController() {
 		var self = this; 
 		var player1 = "X";
 		var player2 = "0";
 
+
 		self.boxClicked = boxClicked;
+		self.makeMove = makeMove;
 
 		// setting the gameboard //
 		self.gameboard = [
@@ -25,16 +28,23 @@
 		// end of gameboard //
  
 		function boxClicked($index) {
-			//called self.gameboard and turn picked true?
-			self.gameboard[$index].picked = true;
-			console.log("Hello")
-			// console.log(self.gameboard[$index].picked)
-
-			// gameboard[$index]
+			var counter = 9;
+			self.gameboard[$index].picked = true; // Setting the 'picked' property in the gameboard to true.
+			
 		};
 
-		// self.test = true;
+		function makeMove($index) {
+			if (self.gameboard[$index] = true) {
+				alert("picked already!");
+			}			else {
+				console.log("TOMATOES!");
+			}
+		};
 
+		
+		// function makeMove($index) {
+
+		// }
 
 		//self.gameboard[0].picked = false;
 	

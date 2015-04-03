@@ -155,6 +155,15 @@
     background-color: green;
 }
 
+.clicked-player-one{
+    background-color: red;
+}
+
+
+
+.test {
+    border: 10px dotted red;
+}
 
 .box:hover{
 

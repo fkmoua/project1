@@ -21,7 +21,7 @@
 	<div id="player-one-side">
 	
 		<div id="player-one-score"></div>
-		<div id="player-one-name">Fancy</div>
+		<div id="player-one-name">Player One</div>
 		<br>
 		<br>
 		<br>
@@ -48,9 +48,11 @@
 <!-- ******************** GAMEBOARD ************************* -->
 	<div id="gameboard">
 
-		<div id="boxes" ng-repeat="box in main.gameboard track by $index" ng-class="{box: true, clicked: main.gameboard[$index].picked}" ng-click="main.boxClicked($index)"> <!-- ng-repeat track by ?--> {{main.gameboard.picked}}
-		 <!-- <span id="chosen" ng-show="main.test">X</span> -->
-		
+		<div id="boxes" 
+		       ng-repeat="box in main.gameboard track by $index" 
+		       ng-class="{box: true, clicked: main.gameboard[$index].picked}" 
+		       ng-click="main.boxClicked($index)"
+		       >
 		</div>
 		
 
@@ -83,7 +85,7 @@
 	<div id="player-two-side"> 
 
 		<div id="player-two-score"></div>
-		<div id="player-two-name"> Patrick </div>
+		<div id="player-two-name"> Player Two </div>
 		<br>
 		<br>
 		<br>

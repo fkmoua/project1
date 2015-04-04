@@ -7,13 +7,11 @@
 	function MainController($firebaseObject) {
 		var self = this; 
 
-		// self.boxClicked = boxClicked;
 		self.syncFirebaseGameboard = syncFirebaseGameboard(); // essentially self.synchFirebasegameboard is gameObject;
 
 		self.boxClicked = boxClicked;
-		// setting the gameboard //
 		
-
+		// setting the gameboard //
 		function syncFirebaseGameboard() {
 			var ref = new Firebase('http://fancy-tictactoe.firebaseio.com')
 			var gameObject = $firebaseObject(ref);
@@ -39,30 +37,38 @@
 		} // end of function syncFirebaseGameboard()
 		
 		function boxClicked($index) {
-			console.log("hello world")
-			// self.syncFirebaseGameboard.gameboard[$index].clicked_player_one = false;
-			// self.syncFirebaseGameboard.gameboard[$index].clicked_player_one = false;
-			if (self.syncFirebaseGameboard.counter % 2 === 0) {
-				self.syncFirebaseGameboard.gameboard[$index].clicked_player_one = true; // Setting the 'picked' property in the gameboard to true.	
-				self.syncFirebaseGameboard.$save();
-			} else if (self.syncFirebaseGameboard.counter % 2 != 0 ) {
-				self.syncFirebaseGameboard.gameboard[$index].clicked_player_two = true; // Setting the 'picked' property in the gameboard to true.	
-				self.syncFirebaseGameboard.$save();
-				
-			} else {
-				alert("pick again!")
+			if ((self.syncFirebaseGameboard.gameboard[$index].clicked_player_one != true) 
+				&& (self.syncFirebaseGameboard.gameboard[$index].clicked_player_two != true)) {
+				  if (self.syncFirebaseGameboard.counter % 2 === 0) {
+					self.syncFirebaseGameboard.gameboard[$index].clicked_player_one = true; // Setting the 'picked' property in the gameboard to true.	
+					self.syncFirebaseGameboard.$save();
+				} else if (self.syncFirebaseGameboard.counter % 2 != 0 ) {
+					self.syncFirebaseGameboard.gameboard[$index].clicked_player_two = true; // Setting the 'picked' property in the gameboard to true.	
+					self.syncFirebaseGameboard.$save();
+				} else 	{
+					alert("Tomatoes!")
+				}
 			}
+			else {
+				alert("pick again!")
+				self.syncFirebaseGameboard.counter--
+				}		
+	
 			self.syncFirebaseGameboard.counter++;
 			self.syncFirebaseGameboard.$save();
-			pickWinner;
+			// pickWinner;
 		} // end of boxClicked function
 
-		function pickWinner() {
-			
-			if ((self.syncFirebaseGameboard.gameboard[0].clicked_player_one = true) && (self.syncFirebaseGameboard.gameboard[1].clicked_player_one = true) && (self.syncFirebaseGameboard.gameboard[2].clicked_player_one = true)) {
-				console.log("Winner!")		
-				alert("Winner!")	
-			}
-		}
+		// function pickWinner() {
+		// 	var self.syncFirebaseGameboard.gameboard[0].clicked_player_one = "a"
+		// 	var self.syncFirebaseGameboard.gameboard[0].clicked_player_one = "b"
+		// 	var self.syncFirebaseGameboard.gameboard[0].clicked_player_one = "c"
+
+
+		// 	if ((a = true) && (b = true) && (c = true)) {
+		// 		console.log("Winner!")		
+		// 		alert("Winner!")	
+		// 	}
+		// }
 	} //end of MainController function
 

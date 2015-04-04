@@ -54,7 +54,15 @@
 			}
 			self.syncFirebaseGameboard.counter++;
 			self.syncFirebaseGameboard.$save();
-			
+			pickWinner;
 		} // end of boxClicked function
+
+		function pickWinner() {
+			
+			if ((self.syncFirebaseGameboard.gameboard[0].clicked_player_one = true) && (self.syncFirebaseGameboard.gameboard[1].clicked_player_one = true) && (self.syncFirebaseGameboard.gameboard[2].clicked_player_one = true)) {
+				console.log("Winner!")		
+				alert("Winner!")	
+			}
+		}
 	} //end of MainController function
 

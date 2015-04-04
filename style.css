@@ -141,20 +141,18 @@
 	display: inline-block;
 	background-color: yellow;
 	box-shadow: 10px 10px 5px #888888;
-      transition: 2s all;
+      transition: 0.5s all;
       margin-right: 2px;
      
 }
-/*
-.box:target{
-    
-}*/
+
 
 .clicked_player_one{
     background-color: red;
     transform: rotateY(180deg);
     box-shadow: 3px 3px 3px 3px #888888;
 }
+
 .clicked_player_two{
     background-color: green;
     transform: rotateY(180deg);

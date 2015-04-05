@@ -37,10 +37,11 @@
 			return gameObject;
 		} // end of function syncFirebaseGameboard()
 		
+
 		function boxClicked($index) {			
 			if ((self.syncFirebaseGameboard.gameboard[$index].clicked_player_one != true) 
 				&& (self.syncFirebaseGameboard.gameboard[$index].clicked_player_two != true)) {
-				  if (self.syncFirebaseGameboard.counter % 2 === 0) {
+				if (self.syncFirebaseGameboard.counter % 2 === 0) {
 					self.syncFirebaseGameboard.gameboard[$index].clicked_player_one = true; // Setting the 'picked' property in the gameboard to true.	
 					self.syncFirebaseGameboard.$save();
 				} else if (self.syncFirebaseGameboard.counter % 2 != 0 ) {
@@ -53,10 +54,11 @@
 			else {
 				alert("pick again!")
 				self.syncFirebaseGameboard.counter--
-				}						
+				}	
+			checkWinner();	
 			self.syncFirebaseGameboard.counter++;
 			self.syncFirebaseGameboard.$save();
-			checkWinner();
+			
 		} // end of boxClicked function
 		function checkWinner() {
 			//player one//
@@ -104,7 +106,7 @@
 			}
 
 			//three rows across for player two//
-			if ((zero2 != false) && (one2 != false) && (two2 != false)) {	
+			else if ((zero2 != false) && (one2 != false) && (two2 != false)) {	
 				alert("Player Two Wins!")	
 			} else if ((three2 != false) && (four2 != false) && (five2 != false)) {
 				alert("Player Two Wins!")
@@ -122,9 +124,8 @@
 				alert("Player Two Wins!")
 			} else if ((two2 != false) && (four2 != false) && (six2 != false)) {
 				alert("Player Two Wins!")
-		}
-	}
-		
+			} 
+		}		
 	} //end of MainController function
 
 

@@ -21,25 +21,29 @@
   margin-right: 20px;
   float: left;
   background-color: #7ae2e2;
-  border: 3px solid #447e7e;
+  border: 5px solid #447e7e;
   box-shadow: 10px 10px 10px #888888;
+  border-right: 8px solid #447e7e;
+
 }
 
 
 #player-one-score {
-	border: 3px solid #0F3D0F;
+	/*border: 5px solid #0F3D0F;*/
+      border: 5px solid black;
 	border-radius: 100px;
-	width: 150px;
-	height: 150px;
+	width: 180px;
+	height: 180px;
 	margin-top: 20px;
-	margin-left: 20px;
-	background-color: #32cd32;
-     opacity:0.5;
-}
+	margin-left: 10px;
+
+	/*background-color: #32cd32;*/
+     background-color: #2ed52e;
+  }
 
 #player-one-name {
-  border: 2px dashed green;
-  margin-top: 5px;
+  border: 2px dashed black;
+  margin-top: 150px;
   margin-left: 0px;
   border-radius: 20px;
   /* padding-top: 20px; */
@@ -50,6 +54,7 @@
   font-size: 37px;
   font-family: 'Pacifico', cursive;
   vertical-align: text-top;
+  background-color: #2ed52e;
 
 }
 
@@ -74,26 +79,27 @@
   margin-left: 10px;
   float: right;
   background-color: #7ae2e2;
-  border: 3px solid #447e7e;
+  border: 5px solid #447e7e;
+  border-left: 8px solid #447e7e;
   box-shadow: 0px 10px 10px 10px #888888;
 
 }
 
 #player-two-score {
-	border: 3px solid black;
+	border: 5px solid black;
 	border-radius: 100px;
-	width: 150px;
-	height: 150px;
-	margin-left: 20px;
+	width: 180px;
+	height: 180px;
+	margin-left: 10px;
 	margin-top: 20px;
-	background-color: red;
-     opacity:0.5;
+	background-color: #ff0000;
+   
 
 }
 
 #player-two-name {
-  border: 2px dashed red;
-  margin-top: 5px;
+  border: 2px dashed black;
+  margin-top: 150px;
   margin-left: 0px;
   border-radius: 20px;
   /* padding-top: 20px; */
@@ -104,6 +110,7 @@
   font-size: 37px;
   font-family: 'Pacifico', cursive;
   vertical-align: text-top;
+  background-color: red;
 }
 
 #player-two-move {
@@ -136,7 +143,7 @@
 .box {
 	width: 190px;
 	height: 190px;
-	border: 5px solid black;
+	border: 6px solid black;
 	border-radius: 40px;
 	display: inline-block;
 	background-color: yellow;
@@ -148,13 +155,13 @@
 
 
 .clicked_player_one{
-    background-color: red;
+    background-color: #2ed52e;
     transform: rotateY(180deg);
     box-shadow: 3px 3px 3px 3px #888888;
 }
 
 .clicked_player_two{
-    background-color: green;
+    background-color: red;
     transform: rotateY(180deg);
     box-shadow: 3px 3px 3px 3px #888888;
     

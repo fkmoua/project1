@@ -6,9 +6,7 @@
 
 	function MainController($firebaseObject) {
 		var self = this; 
-
-		self.syncFirebaseGameboard = syncFirebaseGameboard(); // essentially self.synchFirebasegameboard is gameObject;
-
+		self.syncFirebaseGameboard = syncFirebaseGameboard(); // will return gameObject (the firebase object) //
 		self.boxClicked = boxClicked;
 		
 		
@@ -35,12 +33,11 @@
 
 			) // end of $loaded function.
 			return gameObject;
-		} // end of function syncFirebaseGameboard()
+			} // end of function syncFirebaseGameboard()
 		
 
 		function boxClicked($index) {			
-			if ((self.syncFirebaseGameboard.gameboard[$index].clicked_player_one != true) 
-				&& (self.syncFirebaseGameboard.gameboard[$index].clicked_player_two != true)) {
+			if ((self.syncFirebaseGameboard.gameboard[$index].clicked_player_one != true) && (self.syncFirebaseGameboard.gameboard[$index].clicked_player_two != true)) {
 				if (self.syncFirebaseGameboard.counter % 2 === 0) {
 					self.syncFirebaseGameboard.gameboard[$index].clicked_player_one = true; // Setting the 'picked' property in the gameboard to true.	
 					self.syncFirebaseGameboard.$save();
@@ -50,16 +47,18 @@
 				} else 	{
 					alert("Tomatoes!")
 				}
-			}
+			} // end of checking if box is empty.
 			else {
 				alert("pick again!")
-				self.syncFirebaseGameboard.counter--
+				self.syncFirebaseGameboard.counter--   // alerts player to pick again because box is not empty; counter goes down by 1
 				}	
-			checkWinner();	
 			self.syncFirebaseGameboard.counter++;
+			checkWinner();	
 			self.syncFirebaseGameboard.$save();
 			
 		} // end of boxClicked function
+
+
 		function checkWinner() {
 			//player one//
 			var zero = self.syncFirebaseGameboard.gameboard[0].clicked_player_one;
@@ -82,6 +81,7 @@
 			var six2 = self.syncFirebaseGameboard.gameboard[6].clicked_player_two;
 			var seven2 = self.syncFirebaseGameboard.gameboard[7].clicked_player_two;
 			var eight2 = self.syncFirebaseGameboard.gameboard[8].clicked_player_two;
+			
 			console.log("Hello World") 
 
 			// thee rows across for player one //
@@ -125,8 +125,8 @@
 			} else if ((two2 != false) && (four2 != false) && (six2 != false)) {
 				alert("Player Two Wins!")
 			} 
-		}		
-	} //end of MainController function
+		} // end of checkWinner function.		
+	} //end of MainController function.
 
 
 
